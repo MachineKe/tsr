@@ -10,7 +10,7 @@ This repository contains code and resources for table structure recognition and 
 
 ## Setup Instructions
 
-Follow these steps to set up the project on your local machine:
+Follow these steps to set up the project and the Table Transformer dependency:
 
 ### 1. Clone the repository
 
@@ -33,7 +33,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3. Install dependencies
+### 3. Install project dependencies
 
 If you have a `requirements.txt` file, run:
 
@@ -47,13 +47,37 @@ If you use Jupyter notebooks, install Jupyter:
 pip install notebook
 ```
 
-### 4. Launch Jupyter Notebook
+### 4. Set up Table Transformer
+
+#### Option 1: Install via pip (if available)
+If Table Transformer is available on PyPI:
+```bash
+pip install table-transformer
+```
+
+#### Option 2: Install from source (local folder)
+If you have the Table Transformer source code in a subdirectory (e.g., `table-transformer/`):
+
+```bash
+cd table-transformer
+pip install .
+cd ..
+```
+
+Or, for development mode:
+```bash
+cd table-transformer
+pip install -e .
+cd ..
+```
+
+### 5. Launch Jupyter Notebook
 
 ```bash
 jupyter notebook
 ```
 
-### 5. Add your data and images
+### 6. Add your data and images
 
 Place your images and data files in appropriate folders. These are ignored by git as specified in `.gitignore`.
 
@@ -64,4 +88,3 @@ Place your images and data files in appropriate folders. These are ignored by gi
 - Update the `.gitignore` file as needed to exclude additional files or folders.
 - For any additional dependencies, update `requirements.txt` and re-run the install command.
 - For issues or questions, open an issue on the repository.
-"# tsr" 
